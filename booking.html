@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Visit - CatCaff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="header-text">Book a Visit</h1>
+    <p>Reserve your spot at CatCaff and enjoy a relaxing time with our adorable cats!</p>
+  </header>
+
+  <section>
+    <div class="booking-form">
+      <form id="bookingForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" required>
+
+        <label for="time">Preferred Time</label>
+        <input type="time" id="time" required>
+
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" min="1" max="10" required>
+
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+      <button onclick="window.location.href='index.html'" class="btn back-btn">Back to Main Menu</button>
+    </div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

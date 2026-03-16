@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatCaff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <h1 class="header-text">CatCaff</h1>
+  <p>A cozy café where coffee meets cuddles. Enjoy freshly brewed drinks and spend time with our adorable cats!</p>
+
+  <nav class="header-buttons">
+    <button class="btn" onclick="window.location.href='index.html'">Home</button>
+    <button class="btn" onclick="window.location.href='about.html'">About Us</button>
+    <button class="btn" onclick="window.location.href='faq.html'">FAQ</button>
+    <button class="btn" onclick="window.location.href='booking.html'">Book a Visit</button>
+  </nav>
+
+</header>
+
+  <section>
+    <h2>Meet Our Cats</h2>
+    <div class="cats">
+      <div class="card" data-cat="mochi">
+        <img src="Pictures/Mochi.jpg" alt="Mochi">
+        <h3>Mochi</h3>
+      </div>
+      <div class="card" data-cat="luna">
+        <img src="Pictures/Luna.jpg" alt="Luna">
+        <h3>Luna</h3>
+      </div>
+      <div class="card" data-cat="oliver">
+        <img src="Pictures/Oliver.jpg" alt="Oliver">
+        <h3>Oliver</h3>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Our Menu</h2>
+    <div class="menu-categories">
+      <button class="active" data-category="coffee">Coffee</button>
+      <button data-category="snacks">Snacks</button>
+      <button data-category="specials">Specials</button>
+    </div>
+
+    <div id="coffee" class="menu-category-items active">
+      <div class="card" data-item="Espresso"><img src="Pictures/Espresso.jpg" alt="Espresso"><h3>Espresso</h3></div>
+      <div class="card" data-item="Latte"><img src="Pictures/latte.jpg" alt="Latte"><h3>Latte</h3></div>
+      <div class="card" data-item="Cappuccino"><img src="Pictures/cappuccino.jpg" alt="Cappuccino"><h3>Cappuccino</h3></div>
+      <div class="card" data-item="Americano"><img src="Pictures/americano.jpg" alt="Espresso"><h3>Americano</h3></div>
+      <div class="card" data-item="Iced macha Latte"><img src="Pictures/ice macha.jpg" alt="Latte"><h3>Iced macha Latte</h3></div>
+      <div class="card" data-item="Yerba Mate"><img src="Pictures/Yerba_Mate.jpg" alt="Cappuccino"><h3>Yerba Mate</h3></div>
+    </div>
+
+    <div id="snacks" class="menu-category-items">
+      <div class="card" data-item="croissant"><img src="Pictures/croissant.jpg" alt="Croissant"><h3>Croissant</h3></div>
+      <div class="card" data-item="cheesecake"><img src="Pictures/cheesecake.jpg" alt="Cheesecake"><h3>Cheesecake</h3></div>
+      <div class="card" data-item="sandwich"><img src="Pictures/sandwich.jpg" alt="Sandwich"><h3>Sandwich</h3></div>
+    </div>
+
+    <div id="specials" class="menu-category-items">
+      <div class="card" data-item="catcookie"><img src="Pictures/cat shaped cookie.jpg" alt="Cat-Shaped Cookie"><h3>Cat-Shaped Cookie</h3></div>
+      <div class="card" data-item="cattreats"><img src="Pictures/Cat Treats.jpg" alt="Cat Treats"><h3>Cat Treats</h3></div>
+      <div class="card" data-item="pumpkinlatte"><img src="Pictures/pumpkin latte.jpg" alt="Pumpkin Latte"><h3>Pumpkin Latte</h3></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Visit Us</h2>
+    <div class="contact">
+      <div>
+        <p><strong>Address:</strong> 123 Cat Street, Meowtown</p>
+        <p><strong>Hours:</strong> Mon-Sun: 10am - 8pm</p>
+        <p><strong>Email:</strong> contact@catcaff.com</p>
+      </div>
+      <form id="contactForm">
+        <h3>Send us a message</h3>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 CatCaff. All Rights Reserved.</p>
+  </footer>
+
+  <div id="catModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="catImg" src="" alt="Cat">
+      <h2 id="catName"></h2>
+      <p id="catInfo"></p>
+    </div>
+  </div>
+
+  <div id="itemModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="itemClose">&times;</span>
+      <img id="itemImg" src="" alt="Menu Item">
+      <h2 id="itemName"></h2>
+      <p id="itemInfo"></p>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
