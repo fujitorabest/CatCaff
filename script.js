@@ -134,8 +134,26 @@
 
   const items = {};
   Object.keys(rawItems).forEach(key => {
-    items[normalizeKey(key)] = rawItems[key];
+  items[normalizeKey(key)] = rawItems[key];
   });
+
+document.querySelectorAll('.menu-category-items .card').forEach(card => {
+  const rawKey = card.dataset.item;
+  const key = normalizeKey(rawKey);
+  const item = items[key];
+
+  if (!item) return;
+
+  const match = item.info.match(/\$\d+(\.\d+)?/);
+
+  if (match) {
+    const priceEl = document.createElement('p');
+    priceEl.className = 'price';
+    priceEl.textContent = match[0];
+
+    card.appendChild(priceEl);
+  }
+});
 
   const itemModal = document.getElementById('itemModal');
   const itemImg = document.getElementById('itemImg');
