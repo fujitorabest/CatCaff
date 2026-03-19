@@ -8,9 +8,15 @@ body {
 
 header {
   text-align: center;
-  padding: 30px 20px;
-  background: url(Pictures/HeaderV2.jpeg);
-  background-size: 100% 280px;
+  padding: 60px 20px; /* increase top padding for taller images */
+  background: url(Pictures/HeaderV2.jpeg) no-repeat center center;
+  background-size: cover;  /* scale image proportionally to cover area */
+  background-attachment: scroll; /* optional: prevents   parallax effect */
+  min-height: 280px;      /* ensures minimum header height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-text{
