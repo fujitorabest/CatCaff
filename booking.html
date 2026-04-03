@@ -3,45 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Visit - CatCaff</title>
+  <title data-key="page_title_booking">Book a Visit - CatCaff</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="header-box">
-      <h1 class="header-text">Book a Visit</h1>
-      <p>Reserve your spot at CatCaff and enjoy a relaxing time with our adorable cats!</p>
+    <div class="lang-dropdown">
+      <button class="lang-btn">EN ▾</button>
+      <div class="lang-menu">
+        <div data-lang="en">English</div>
+        <div data-lang="am">Հայերեն</div>
+        <div data-lang="ru">Русский</div>
+      </div>
     </div>
-    
+
+    <div class="header-box">
+      <h1 class="header-text" data-key="booking_header_title">Book a Visit</h1>
+      <p data-key="booking_header_subtitle">Reserve your spot at CatCaff and enjoy a relaxing time with our adorable cats!</p>
+    </div>
+
     <nav class="header-buttons">
-      <button class="btn" onclick="window.location.href='index.html'">Home</button>
-      <button class="btn" onclick="window.location.href='about.html'">About Us</button>
-      <button class="btn" onclick="window.location.href='faq.html'">FAQ</button>
-      <button class="btn" onclick="window.location.href='booking.html'">Book a Visit</button>
+      <button class="btn" onclick="window.location.href='index.html'" data-key="nav_home">Home</button>
+      <button class="btn" onclick="window.location.href='about.html'" data-key="nav_about">About Us</button>
+      <button class="btn" onclick="window.location.href='faq.html'" data-key="nav_faq">FAQ</button>
+      <button class="btn" onclick="window.location.href='booking.html'" data-key="nav_booking">Book a Visit</button>
     </nav>
   </header>
 
   <section>
     <div class="booking-form">
+      <h2 data-key="booking_form_title">Plan Your Visit</h2>
       <form id="bookingForm">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" required>
+        <label for="name" data-key="booking_name_label">Full Name</label>
+        <input type="text" id="name" data-key="booking_name_ph" data-attr="placeholder" placeholder="Your Name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+        <label for="email" data-key="booking_email_label">Email</label>
+        <input type="email" id="email" data-key="booking_email_ph" data-attr="placeholder" placeholder="Your Email" required>
 
-        <label for="date">Preferred Date</label>
+        <label for="date" data-key="booking_date_label">Preferred Date</label>
         <input type="date" id="date" required>
 
-        <label for="time">Preferred Time</label>
+        <label for="time" data-key="booking_time_label">Preferred Time</label>
         <input type="time" id="time" required>
 
-        <label for="guests">Number of Guests</label>
+        <label for="guests" data-key="booking_guests_label">Number of Guests</label>
         <input type="number" id="guests" min="1" max="10" required>
 
-        <button type="submit" class="btn">Confirm Booking</button>
+        <button type="submit" class="btn" data-key="booking_submit">Confirm Booking</button>
       </form>
-      <button onclick="window.location.href='index.html'" class="btn back-btn">Back to Main Menu</button>
+      <button onclick="window.location.href='index.html'" class="btn back-btn" data-key="booking_back">Back to Main Menu</button>
     </div>
   </section>
 

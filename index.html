@@ -3,92 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CatCaff</title>
+  <title data-key="page_title_index">CatCaff</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-  <div class="header-box">
-    <h1 class="header-text">CatCaff</h1>
-    <p>A cozy café where coffee meets cuddles. Enjoy freshly brewed drinks and spend time with our adorable cats!</p>
-  </div>
+    <div class="lang-dropdown">
+      <button class="lang-btn">EN ▾</button>
+      <div class="lang-menu">
+        <div data-lang="en">English</div>
+        <div data-lang="am">Հայերեն</div>
+        <div data-lang="ru">Русский</div>
+      </div>
+    </div>
 
-  <nav class="header-buttons">
-    <button class="btn" onclick="window.location.href='index.html'">Home</button>
-    <button class="btn" onclick="window.location.href='about.html'">About Us</button>
-    <button class="btn" onclick="window.location.href='faq.html'">FAQ</button>
-    <button class="btn" onclick="window.location.href='booking.html'">Book a Visit</button>
-  </nav>
+    <div class="header-box">
+      <h1 class="header-text" data-key="brand_name">CatCaff</h1>
+      <p data-key="subtitle_index">A cozy café where coffee meets cuddles. Enjoy freshly brewed drinks and spend time with our adorable cats!</p>
+    </div>
 
-</header>
+    <nav class="header-buttons">
+      <button class="btn" onclick="window.location.href='index.html'" data-key="nav_home">Home</button>
+      <button class="btn" onclick="window.location.href='about.html'" data-key="nav_about">About Us</button>
+      <button class="btn" onclick="window.location.href='faq.html'" data-key="nav_faq">FAQ</button>
+      <button class="btn" onclick="window.location.href='booking.html'" data-key="nav_booking">Book a Visit</button>
+    </nav>
+  </header>
 
   <section>
-    <h2>Meet Our Cats</h2>
+    <h2 data-key="meet_cats">Meet Our Cats</h2>
     <div class="cats">
       <div class="card" data-cat="mochi">
         <img src="Pictures/Mochi.jpg" alt="Mochi">
-        <h3>Mochi</h3>
+        <h3 data-key="cat_mochi_name">Mochi</h3>
       </div>
       <div class="card" data-cat="luna">
         <img src="Pictures/Luna.jpg" alt="Luna">
-        <h3>Luna</h3>
+        <h3 data-key="cat_luna_name">Luna</h3>
       </div>
       <div class="card" data-cat="oliver">
         <img src="Pictures/Oliver.jpg" alt="Oliver">
-        <h3>Oliver</h3>
+        <h3 data-key="cat_oliver_name">Oliver</h3>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Our Menu</h2>
+    <h2 data-key="our_menu">Our Menu</h2>
     <div class="menu-categories">
-      <button class="active" data-category="coffee">Coffee</button>
-      <button data-category="snacks">Snacks</button>
-      <button data-category="specials">Specials</button>
+      <button class="active" data-category="coffee" data-key="menu_cat_coffee">Coffee</button>
+      <button data-category="snacks" data-key="menu_cat_snacks">Snacks</button>
+      <button data-category="specials" data-key="menu_cat_specials">Specials</button>
     </div>
 
     <div id="coffee" class="menu-category-items active">
-      <div class="card" data-item="Espresso"><img src="Pictures/Espresso.jpg" alt="Espresso"><h3>Espresso</h3></div>
-      <div class="card" data-item="Latte"><img src="Pictures/latte.jpg" alt="Latte"><h3>Latte</h3></div>
-      <div class="card" data-item="Cappuccino"><img src="Pictures/cappuccino.jpg" alt="Cappuccino"><h3>Cappuccino</h3></div>
-      <div class="card" data-item="Americano"><img src="Pictures/americano.jpg" alt="Espresso"><h3>Americano</h3></div>
-      <div class="card" data-item="Iced Matcha Latte"><img src="Pictures/ice macha.jpg" alt="Iced Matcha Latte"><h3>Iced Matcha Latte</h3></div>      <div class="card" data-item="Yerba Mate"><img src="Pictures/Yerba_Mate.jpg" alt="Cappuccino"><h3>Yerba Mate</h3></div>
+      <div class="card" data-item="espresso">
+        <img src="Pictures/Espresso.jpg" alt="Espresso">
+        <h3 data-key="item_espresso_name">Espresso</h3>
+      </div>
+      <div class="card" data-item="latte">
+        <img src="Pictures/latte.jpg" alt="Latte">
+        <h3 data-key="item_latte_name">Latte</h3>
+      </div>
+      <div class="card" data-item="cappuccino">
+        <img src="Pictures/cappuccino.jpg" alt="Cappuccino">
+        <h3 data-key="item_cappuccino_name">Cappuccino</h3>
+      </div>
+      <div class="card" data-item="americano">
+        <img src="Pictures/americano.jpg" alt="Americano">
+        <h3 data-key="item_americano_name">Americano</h3>
+      </div>
+      <div class="card" data-item="icedmatchalatte">
+        <img src="Pictures/ice macha.jpg" alt="Iced Matcha Latte">
+        <h3 data-key="item_icedmatchalatte_name">Iced Matcha Latte</h3>
+      </div>
+      <div class="card" data-item="yerbamate">
+        <img src="Pictures/Yerba_Mate.jpg" alt="Yerba Mate">
+        <h3 data-key="item_yerbamate_name">Yerba Mate</h3>
+      </div>
     </div>
 
     <div id="snacks" class="menu-category-items">
-      <div class="card" data-item="croissant"><img src="Pictures/croissant.jpg" alt="Croissant"><h3>Croissant</h3></div>
-      <div class="card" data-item="cheesecake"><img src="Pictures/cheesecake.jpg" alt="Cheesecake"><h3>Cheesecake</h3></div>
-      <div class="card" data-item="sandwich"><img src="Pictures/sandwich.jpg" alt="Sandwich"><h3>Sandwich</h3></div>
+      <div class="card" data-item="croissant">
+        <img src="Pictures/croissant.jpg" alt="Croissant">
+        <h3 data-key="item_croissant_name">Croissant</h3>
+      </div>
+      <div class="card" data-item="cheesecake">
+        <img src="Pictures/cheesecake.jpg" alt="Cheesecake">
+        <h3 data-key="item_cheesecake_name">Cheesecake</h3>
+      </div>
+      <div class="card" data-item="sandwich">
+        <img src="Pictures/sandwich.jpg" alt="Sandwich">
+        <h3 data-key="item_sandwich_name">Sandwich</h3>
+      </div>
     </div>
 
     <div id="specials" class="menu-category-items">
-      <div class="card" data-item="catcookie"><img src="Pictures/cat shaped cookie.jpg" alt="Cat-Shaped Cookie"><h3>Cat-Shaped Cookie</h3></div>
-      <div class="card" data-item="cattreats"><img src="Pictures/Cat Treats.jpg" alt="Cat Treats"><h3>Cat Treats</h3></div>
-      <div class="card" data-item="pumpkinlatte"><img src="Pictures/pumpkin latte.jpg" alt="Pumpkin Latte"><h3>Pumpkin Latte</h3></div>
+      <div class="card" data-item="catcookie">
+        <img src="Pictures/cat shaped cookie.jpg" alt="Cat-Shaped Cookie">
+        <h3 data-key="item_catcookie_name">Cat-Shaped Cookie</h3>
+      </div>
+      <div class="card" data-item="cattreats">
+        <img src="Pictures/Cat Treats.jpg" alt="Cat Treats">
+        <h3 data-key="item_cattreats_name">Cat Treats</h3>
+      </div>
+      <div class="card" data-item="pumpkinlatte">
+        <img src="Pictures/pumpkin latte.jpg" alt="Pumpkin Latte">
+        <h3 data-key="item_pumpkinlatte_name">Pumpkin Latte</h3>
+      </div>
     </div>
   </section>
 
   <section>
-    <h2>Visit Us</h2>
+    <h2 data-key="visit_us">Visit Us</h2>
     <div class="contact">
       <div>
-        <p><strong>Address:</strong> 123 Cat Street, Meowtown</p>
-        <p><strong>Hours:</strong> Mon-Sun: 10am - 8pm</p>
-        <p><strong>Email:</strong> contact@catcaff.com</p>
+        <p data-key="contact_address">Address: 123 Cat Street, Meowtown</p>
+        <p data-key="contact_hours">Hours: Mon-Sun: 10am - 8pm</p>
+        <p data-key="contact_email">Email: contact@catcaff.com</p>
       </div>
       <form id="contactForm">
-        <h3>Send us a message</h3>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send</button>
+        <h3 data-key="contact_title">Send us a message</h3>
+        <input type="text" data-key="contact_name_ph" data-attr="placeholder" placeholder="Your Name" required>
+        <input type="email" data-key="contact_email_ph" data-attr="placeholder" placeholder="Your Email" required>
+        <textarea rows="4" data-key="contact_message_ph" data-attr="placeholder" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn" data-key="contact_send">Send</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 CatCaff. All Rights Reserved.</p>
+    <p data-key="footer_copyright">© 2025 CatCaff. All Rights Reserved.</p>
   </footer>
 
   <div id="catModal" class="modal">
@@ -108,8 +153,9 @@
       <p id="itemInfo"></p>
     </div>
   </div>
+
   <div id="toast" class="toast"></div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

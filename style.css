@@ -1,4 +1,3 @@
-/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -7,21 +6,23 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
-  padding: 60px 20px; /* increase top padding for taller images */
+  padding: 60px 20px;
   background: url(Pictures/HeaderV2.jpeg) no-repeat center center;
-  background-size: cover;  /* scale image proportionally to cover area */
-  background-attachment: scroll; /* optional: prevents   parallax effect */
-  min-height: 280px;      /* ensures minimum header height */
+  background-size: cover;
+  background-attachment: scroll;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.header-text{
-  color: #d47e41;
+.header-text {
+  color: #d86619;
 }
+
 header h1 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -33,7 +34,6 @@ header p {
   margin: 0 auto;
 }
 
-/* Header Navigation Buttons */
 .header-buttons {
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@ header p {
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 1rem;
-  background: #d2691e;
+  background: #d86619;
   color: white;
   border: none;
   cursor: pointer;
@@ -54,43 +54,38 @@ header p {
 }
 
 .header-buttons .btn:hover {
-  background: #a0522d;
+  background: #a44d13;
 }
 
-/* General Button Styles */
 .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 24px;
   border: none;
   border-radius: 25px;
-  background: #d2691e;
+  background: #d86619;
   color: white;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: #a0522d;
+  background: #a44d13;
 }
 
 .header-box {
   display: inline-block;
   padding: 20px 30px;
   border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.25); /* transparency */
-  backdrop-filter: blur(5px); /* glass blur */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
-
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* Section Styles */
 section {
   padding: 60px 20px;
   max-width: 1000px;
@@ -103,8 +98,9 @@ section h2 {
   margin-bottom: 30px;
 }
 
-/* Cards */
-.cats, .menu-items, .menu-category-items {
+.cats,
+.menu-items,
+.menu-category-items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -134,7 +130,6 @@ section h2 {
   margin: 15px 0;
 }
 
-/* Contact & Booking Forms */
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -150,6 +145,19 @@ section h2 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.booking-form h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #d86619;
+  text-align: center;
+}
+
+.contact label,
+.booking-form label {
+  font-weight: 700;
+  text-align: left;
 }
 
 .contact input,
@@ -177,13 +185,13 @@ section h2 {
 .booking-form input:focus,
 .booking-form textarea:focus,
 .booking-form select:focus {
-  border-color: #ff9800;
+  border-color: #fa7923;
   box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
   outline: none;
 }
 
 form .btn {
-  background-color: #ff9800;
+  background-color: #fa7923;
   color: white;
   font-size: 1.1rem;
   padding: 0.9rem;
@@ -194,7 +202,7 @@ form .btn {
 }
 
 form .btn:hover {
-  background-color: #e68900;
+  background-color: #d5671d;
 }
 
 footer {
@@ -204,13 +212,12 @@ footer {
   margin-top: 30px;
 }
 
-@media(max-width: 768px){
+@media(max-width: 768px) {
   .contact {
     grid-template-columns: 1fr;
   }
 }
 
-/* Menu Section */
 .menu-categories {
   display: flex;
   justify-content: center;
@@ -222,13 +229,13 @@ footer {
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
-  background: #d2691e;
+  background: #d86619;
   color: white;
   cursor: pointer;
 }
 
 .menu-categories button.active {
-  background: #8b4513;
+  background: #a44d13;
 }
 
 .menu-category-items {
@@ -239,13 +246,14 @@ footer {
   display: grid;
 }
 
-/* Modal Styles */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.6);
   justify-content: center;
   align-items: center;
@@ -289,15 +297,15 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 2rem;         
-  font-weight: bold;         
-  color: #fff;             
-  background-color: rgba(0,0,0,0.6); 
-  border-radius: 50%;       
-  width: 35px;             
-  height: 35px;           
-  line-height: 35px;        
-  text-align: center;      
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
   cursor: pointer;
   z-index: 10;
   transition: background 0.3s ease, color 0.3s ease;
@@ -305,10 +313,9 @@ footer {
 
 .close:hover {
   background-color: rgba(0,0,0,0.9);
-  color: #ff9800;            
+  color: #ff9800;
 }
 
-/* Page Section Card Style for About & FAQ */
 .page-section {
   max-width: 900px;
   margin: 40px auto;
@@ -316,18 +323,18 @@ footer {
   border-radius: 15px;
   background: white;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center; 
+  text-align: center;
 }
 
 .page-section:nth-child(even) {
-  background: #fff4e6; 
+  background: #ffd6bb;
 }
 
 .page-section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #d2691e;
+  color: #d86619;
 }
 
 .page-section p,
@@ -335,8 +342,9 @@ footer {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #444;
-  text-align: center; 
+  text-align: center;
 }
+
 .page-section ul {
   display: block;
   text-align: left !important;
@@ -344,10 +352,11 @@ footer {
   margin: 15px auto;
   list-style-position: outside;
 }
+
 .page-section ul li {
   text-align: left !important;
 }
-/* Toast Notification Styles */
+
 .toast {
   visibility: hidden;
   min-width: 250px;
@@ -370,4 +379,45 @@ footer {
   visibility: visible;
   opacity: 1;
   bottom: 50px;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3000;
+}
+
+.lang-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: #d86619;
+  color: white;
+  cursor: pointer;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.lang-menu div {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.lang-menu div:hover {
+  background: #ffd6bb;
+}
+
+.lang-dropdown.active .lang-menu {
+  display: block;
 }
